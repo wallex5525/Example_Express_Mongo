@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ESCOLHA UM NUMERO!!!</title>
+</head>
+
+<body>
+    <form action="/numero" method="post">
+        <input type="text" name="nome" placeholder="Seu nome..." />
+        <input type="number" name="numero" placeholder="Seu numero..." />
+        <button type="submit">Escolher</button>
+    </form>
+    
+    <% parametros.forEach((item)=>{%>
+        <label><%- item.nome %></label>
+        <label><%- item.numero %></label>
+        <a href="/goEdit/<%- item._id%>">update</a>
+        <a href="/delete/<%- item._id%>">delete</a>
+    <%}) %>
+
+
+</body>
+
+</html>
